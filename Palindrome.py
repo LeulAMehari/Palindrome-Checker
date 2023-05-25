@@ -104,6 +104,9 @@ def explorePalindrome(stringToTest):
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~   User Input and Function Calling   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # asks for user input
 userInput = input("Enter Here: ")
+while userInput == "":
+    print("The input is empty")
+    userInput = input("Please enter the input here: ")
 # pushes user input into a stack
 num_stack = Stack()
 num_stack.push(userInput)
@@ -118,4 +121,9 @@ onlyAphasString = reverseStringAndRemoveNonAlpha(mystring)
 if isPalindrome(onlyAphasString) == True:
    print(onlyAphasString + " is a palindrome")
    #Check to see if there is a palindrome in the palindrome
-   explorePalindrome(onlyAphasString)
+   if isPalindrome(onlyAphasString) == True:
+   print(onlyAphasString + " is a palindrome")
+   #Check to see if there is a palindrome in the palindrome
+   if (len(onlyAphasString))>1:
+      explorePalindrome(onlyAphasString)
+
